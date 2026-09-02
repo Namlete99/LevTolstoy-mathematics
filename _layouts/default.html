@@ -1,0 +1,75 @@
+---
+---
+<!doctype html>
+<html>
+  <head>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- Computer Modern (phông chữ của LaTeX) -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/bitmaks/cm-web-fonts@latest/fonts.css"> 
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- Share -->
+    <meta property="og:image" content="favicon.ico"/>
+    <meta property="og:title" content="Text LaTeX Theme 130526"/>
+    <meta property="og:url" content="https://namnl2510757-gif.github.io/130526/"/>
+    <meta property="og:description" content="Bản test này tập trung vào việc soạn lại dự án mẫu (Example LaTeX) của LaTeX thành web."/>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+  </head>
+  
+  <body class="dark-theme || light-theme">
+    
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="https://github.com/Namlete102/LaTeX-theme/issues/new" target="_blank">Issues</a></li>
+                <li><a href="https://namlete102.github.io/hacked-jekyll/" target="_blank">Back to abstract</a></li>
+                <li><a href="./archives/Test_LaTeX_theme.pdf" target="_blank">Download PDF</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="Margins">
+      <p class="LatexTitle">{{ page.title }}</p>
+      {% if page.author %} <p class="LatexName">{{ page.author }} <a id="footnote-1-ref" href="#author1">\(^{1}\)</a></p> {% endif %}
+      {% if page.date %} <p class="LatexDate">{{ page.date }}</p> {% endif %}
+      
+      {% if page.abstract %}<div class="AbstractMargins">
+        <p class="LatexAbstract">Abstract</p>
+        <p class="LatexAbstractText">{{ page.abstract }}</p>
+      </div>{% endif %}
+
+      {{ content }}
+     <!-- Bộ sưu tập ảnh thu nhỏ trên trang web (Bấm vào để mở bộ xem ảnh) -->
+ 
+    <!-- GIAO DIỆN XEM ẢNH TOÀN MÀN HÌNH (LIGHTBOX) -->
+    <div class="lightbox-overlay" id="lightbox">
+      <!-- Nút đóng (X) -->
+      <span class="close-btn" onclick="closeLightbox()">&times;</span>
+
+      <!-- Nút chuyển ảnh sang trái (<) -->
+      <button class="nav-btn prev-btn" onclick="changeImage(-1)">&#10094;</button>
+
+      <!-- Khung chứa ảnh để xử lý Zoom -->
+      <div class="image-container">
+        <img id="lightbox-img" src="" alt="Zoomable Image">
+        <!-- Nút Zoom nhanh (Tùy chọn) -->
+        <div class="zoom-indicator" onclick="toggleZoom()"></div>
+      </div>
+
+      <!-- Nút chuyển ảnh sang phải (>) -->
+      <button class="nav-btn next-btn" onclick="changeImage(1)">&#10095;</button>
+    </div>
+     
+    <!--Ảnh được chuyển sang chế độ xem ảnh toàn màn hình-->
+    <script src="./assets/js/script.js"></script>
+
+    <!-- Mathjax -->
+    <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+
+  </body>
+</html>
