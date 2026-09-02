@@ -148,6 +148,24 @@ a {
     cursor: pointer;
 }
 
+/* Bổ đề (Lemma) */
+
+.lemma{
+    font-size: 23px;    
+    display: block;
+    font-style:normal;
+}
+
+.lemma:before {
+    content: "Bổ đề "attr(number)".";
+    font-weight: bold;
+    font-style: italic;
+}
+
+.lemma[text]:before {
+    content: "Định nghĩa "attr(number)" (" attr(text) "). ";
+}
+
 /* Chèn ảnh */
 
 figure{
