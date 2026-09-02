@@ -174,12 +174,12 @@ a {
     font-style:normal;
 }
 
-.lemma:before {
+.proof:before {
     content: "Chứng minh "attr(number)".";
     font-style: italic;
 }
 
-.lemma[text]:before {
+.proof[text]:before {
     content: "Chứng minh "attr(number)" (" attr(text) "). ";
 }
 
