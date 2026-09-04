@@ -19,8 +19,8 @@
       
       // Danh sách các đường dẫn ảnh của bạn
       const images = [
-        './img/Andrew Wiles.jpg',
-        './img/david foster wallace.jpg',
+        './images/leo-tolstoy-696x367.jpeg',
+        './images/Convex polygon.jpg',
       ];
 
       let currentIndex = 0;

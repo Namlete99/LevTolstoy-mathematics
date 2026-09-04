@@ -153,17 +153,34 @@ a {
 .lemma{
     font-size: 23px;    
     display: block;
-    font-style:normal;
+    font-style:italic;
 }
 
 .lemma:before {
     content: "Bổ đề "attr(number)".";
     font-weight: bold;
-    font-style: italic;
+    font-style:normal;
 }
 
 .lemma[text]:before {
-    content: "Định nghĩa "attr(number)" (" attr(text) "). ";
+    content: "Bổ đề "attr(number)" (" attr(text) "). ";
+}
+
+/* Chứng minh (proof) */
+
+.proof{
+    font-size: 23px;    
+    display: block;
+    font-style:normal;
+}
+
+.proof:before {
+    content: "Chứng minh "attr(number)".";
+    font-style: italic;
+}
+
+.proof[text]:before {
+    content: "Chứng minh "attr(number)" (" attr(text) "). ";
 }
 
 /* Chèn ảnh */
